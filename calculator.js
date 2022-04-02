@@ -1,5 +1,11 @@
 function appendOperation(operation) {
-    document.getElementById('resultArea').innerHTML += operation;
+    let container = document.getElementById('resultArea');
+    if (container.innerHTML == 0) {
+        document.getElementById('resultArea').innerHTML = operation;
+    } else {
+        document.getElementById('resultArea').innerHTML += operation;
+    }
+
 }
 
 function calculateResult() {
