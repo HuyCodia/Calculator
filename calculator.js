@@ -30,9 +30,7 @@ function deleteLast() {
     }
 }
 
-/*
 function resetInput() {
     let container = document.getElementById('resultArea');
     container.innerHTML = 0;
 }
-*/
