@@ -10,9 +10,17 @@ function calculateResult() {
 
 function deleteLast() {
     let container = document.getElementById('resultArea');
+
     if (container.innerHTML.endsWith(' ')) {
-        container.innerHTML = container.innerHTML.slice(0, -3);        } else {
+        container.innerHTML = container.innerHTML.slice(0, -3);
+        if (container.innerHTML.length == 0) {
+            container.innerHTML = 0;
+        }         
+    } else {
         container.innerHTML = container.innerHTML.slice(0, -1);
+        if (container.innerHTML.length == 0) {
+            container.innerHTML = 0;
+        } 
     }
 }
 
