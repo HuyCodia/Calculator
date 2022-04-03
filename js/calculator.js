@@ -1,4 +1,4 @@
-let container;
+var container;
 
 window.addEventListener("load", function() {
   container = document.getElementById('resultArea');
