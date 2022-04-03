@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 
-    <!-- import fonts -->
+    <!-- import google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
 
     <table>
         <tr>
-            <td></td>
-            <td></td>
+            <td onclick="appendOperation(' ( ')">(</td>
+            <td onclick="appendOperation(' ) ')">)</td>
             <td onclick="resetInput()">RESET</td> 
             <td onclick="deleteLast()" class="highlight">DEL</td>
         </tr>
