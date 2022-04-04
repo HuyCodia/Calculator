@@ -24,7 +24,7 @@ td:hover {
 }
 
 #resultArea {
-    height: 30vh;
+    height: 20vh;
     background-color: rgb(50, 50, 50);
     color: white;
     font-size: 64px;
@@ -35,6 +35,21 @@ td:hover {
     padding: 24px;
     /* verhindert Vergrößerung des Boxes */
     box-sizing: border-box;
+    /*width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;*/
+}
+
+#syntaxError {
+    height: 10vh;
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffffff;
 }
 
 #result {
