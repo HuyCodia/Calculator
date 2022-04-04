@@ -17,7 +17,7 @@
 
     <script src="js/calculator.js"></script>
 
-    <link rel="icon" href="/img/calculator_operation_640x640-removebg-preview.png" type="image/png>
+    <link rel="icon" href="/img/calculator_operation_640x640-removebg-preview.png" type="image/png">
 
 </head>
 
@@ -32,28 +32,28 @@
             <td onclick="deleteLast()" class="highlight">DEL</td>
         </tr>
         <tr> 
-            <td onclick="appendOperation(7)">7</td>
-            <td onclick="appendOperation(8)">8</td>
-            <td onclick="appendOperation(9)">9</td>
+            <td onclick="appendDigit(7)">7</td>
+            <td onclick="appendDigit(8)">8</td>
+            <td onclick="appendDigit(9)">9</td>
             <td onclick="appendOperation(' / ')" class="highlight">/</td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation(4)">4</td>
-            <td onclick="appendOperation(5)">5</td>
-            <td onclick="appendOperation(6)">6</td>
+            <td onclick="appendDigit(4)">4</td>
+            <td onclick="appendDigit(5)">5</td>
+            <td onclick="appendDigit(6)">6</td>
             <td onclick="appendOperation(' * ')" class="highlight">x</td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation(1)">1</td>
-            <td onclick="appendOperation(2)">2</td>
-            <td onclick="appendOperation(3)">3</td>
+            <td onclick="appendDigit(1)">1</td>
+            <td onclick="appendDigit(2)">2</td>
+            <td onclick="appendDigit(3)">3</td>
             <td onclick="appendOperation(' - ')" class="highlight">-</td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation(0)">0</td>
+            <td onclick="appendDigit(0)">0</td>
             <td onclick="appendOperation('.')">.</td>
             <td onclick="calculateResult()" id="result">=</td>
             <td onclick="appendOperation(' + ')" class="highlight">+</td>
