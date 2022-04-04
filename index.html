@@ -26,37 +26,37 @@
 
     <table>
         <tr>
-            <td onclick="appendPrentheses(' ( ')">(</td>
-            <td onclick="appendPrentheses(' ) ')">)</td>
-            <td onclick="resetInput()">RESET</td> 
-            <td onclick="deleteLast()" class="highlight">DEL</td>
+            <td onclick="appendPrentheses(' ( ')" class="highlight-first-row">(</td>
+            <td onclick="appendPrentheses(' ) ')" class="highlight-first-row">)</td>
+            <td onclick="resetInput()" class="highlight-first-row">RESET</td> 
+            <td onclick="deleteLast()" class="highlight-last-col">DEL</td>
         </tr>
         <tr> 
             <td onclick="appendDigit(7)">7</td>
             <td onclick="appendDigit(8)">8</td>
             <td onclick="appendDigit(9)">9</td>
-            <td onclick="appendOperation(' / ')" class="highlight">/</td>
+            <td onclick="appendOperation(' / ')" class="highlight-last-col">/</td>
         </tr>
 
         <tr>
             <td onclick="appendDigit(4)">4</td>
             <td onclick="appendDigit(5)">5</td>
             <td onclick="appendDigit(6)">6</td>
-            <td onclick="appendOperation(' * ')" class="highlight">x</td>
+            <td onclick="appendOperation(' * ')" class="highlight-last-col">x</td>
         </tr>
 
         <tr>
             <td onclick="appendDigit(1)">1</td>
             <td onclick="appendDigit(2)">2</td>
             <td onclick="appendDigit(3)">3</td>
-            <td onclick="appendOperation(' - ')" class="highlight">-</td>
+            <td onclick="appendOperation(' - ')" class="highlight-last-col">-</td>
         </tr>
 
         <tr>
             <td onclick="appendDigit(0)">0</td>
             <td onclick="appendOperation('.')">.</td>
             <td onclick="calculateResult()" id="result">=</td>
-            <td onclick="appendOperation(' + ')" class="highlight">+</td>
+            <td onclick="appendOperation(' + ')" class="highlight-last-col">+</td>
         </tr>        
 
     </table>

@@ -16,7 +16,7 @@ function appendOperation(operation) {
 }
 
 function appendDigit(digit) {
-    container.innerHTML == 0 ? container.innerHTML = digit : container.innerHTML += digit;
+    container.innerHTML === '0' ? container.innerHTML = digit : container.innerHTML += digit;
 }
 
 function appendPrentheses(parentheses) {
@@ -36,17 +36,17 @@ function calculateResult() {
 function deleteLast() {
     if (container.innerHTML.endsWith(' ')) {
         container.innerHTML = container.innerHTML.slice(0, -3);
-        if (container.innerHTML.length == 0) {
-            container.innerHTML = 0;
+        if (container.innerHTML.length === 0) {
+            container.innerHTML = '0';
         }         
     } else {
         container.innerHTML = container.innerHTML.slice(0, -1);
-        if (container.innerHTML.length == 0) {
-            container.innerHTML = 0;
+        if (container.innerHTML.length == '0') {
+            container.innerHTML = '0';
         } 
     }
 }
 
 function resetInput() {
-    container.innerHTML = 0;
+    container.innerHTML = '0';
 }

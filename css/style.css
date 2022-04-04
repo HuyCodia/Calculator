@@ -45,10 +45,18 @@ td:hover {
     background-color: rgb(70, 70, 150);
 }
 
-.highlight {
+.highlight-last-col {
     background-color: rgb(226, 165, 52);
 }
 
-.highlight:hover {
+.highlight-last-col:hover {
     background-color: rgb(209, 176, 115);
+}
+
+.highlight-first-row {
+    background-color: rgb(139, 139, 139);
+}
+
+.highlight-first-row:hover {
+    background-color: rgb(175, 175, 175);;
 }
