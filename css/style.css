@@ -24,7 +24,7 @@ td:hover {
 }
 
 #resultArea {
-    height: 20vh;
+    height: 15vh;
     background-color: rgb(50, 50, 50);
     color: white;
     font-size: 64px;
@@ -74,4 +74,17 @@ td:hover {
 
 .highlight-first-row:hover {
     background-color: rgb(175, 175, 175);;
+}
+
+#repo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #191919;
+    height: 5vh;
+    color: rgb(175, 175, 175);
+}
+
+a {
+    color: #ffffff;
 }
