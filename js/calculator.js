@@ -28,7 +28,9 @@ function appendPrentheses(parentheses) {
 
 function calculateResult() {
     try {
-        let result = eval(container.innerHTML);  
+        let result = eval(container.innerHTML);
+        /*console.log(typeof result);*/
+        result = result.toString().substring(0, 13);
         container.innerHTML = result;
     }
     catch {

@@ -1,8 +1,9 @@
 body {
     /*height: 100vh;
     width: 500px;*/
+    width: 100%; /*60%*/
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin: 0; /*auto*/
 }
 
 table {
@@ -51,7 +52,7 @@ td:hover {
     align-items: center;
     font-size: 30px;
     font-family: 'Roboto Condensed', sans-serif;
-    color: #ffffff;
+    color: #ff4b4b;
 }
 
 #result {
