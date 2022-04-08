@@ -1,65 +1,77 @@
 var container;
-
 window.addEventListener("load", function() {
   container = document.getElementById('resultArea');
 }, {once: true});
 
+window.addEventListener("click", reachMaxLength, {once: true});
+
+var maxLength = false;
+function reachMaxLength() {
+    if (container.innerText.length < 13) {
+        maxLength = false;
+        return;
+    }
+    maxLength = true;
+}
+
 function appendOperation(operation) {
-    let op_split = container.innerHTML.split('');
+    let op_split = container.innerText.split('');
     let len_op = op_split.length - 1;
     let last_char = op_split[len_op];
     
     if (last_char != ' ') {
-        container.innerHTML += operation;
-    } 
+        container.innerText += operation;
+    }
 }
 
 function appendDigit(digit) {
-    container.innerHTML === '0' ? container.innerHTML = digit : container.innerHTML += digit;
+    if (!maxLength) {
+        container.innerText === '0' ? container.innerText = digit : container.innerText += digit;
+    }
 }
 
 function appendPrentheses(parentheses) {
-    if (container.innerHTML.endsWith(' ')) {
-        container.innerHTML += parentheses;
-    } else if (container.innerHTML === '0') {
-        container.innerHTML = parentheses;
+    if (container.innerText.endsWith(' ')) {
+        container.innerText += parentheses;
+    } else if (container.innerText === '0') {
+        container.innerText = parentheses;
     }
 }
 
 function calculateResult() {
     try {
-        let result = eval(container.innerHTML);
+        let result = eval(container.innerText);
         /*console.log(typeof result);*/
         result = result.toString().substring(0, 13);
-        container.innerHTML = result;
+        container.innerText = result;
     }
     catch {
-        document.getElementById('syntaxError').innerHTML = 'Syntax ERROR x';
+        document.getElementById('syntaxError').innerText = 'Syntax ERROR x';
     }
 }
 
 function deleteLast() {
-    if (document.getElementById('syntaxError').innerHTML === 'Syntax ERROR x') {
-        document.getElementById('syntaxError').innerHTML = '';
+    if (document.getElementById('syntaxError').innerText === 'Syntax ERROR x') {
+        document.getElementById('syntaxError').innerText = '';
     }
 
-    if (container.innerHTML.endsWith(' ')) {
-        container.innerHTML = container.innerHTML.slice(0, -3);
-        if (container.innerHTML.length === 0) {
-            container.innerHTML = '0';
+    if (container.innerText.endsWith(' ')) {
+        container.innerText = container.innerText.slice(0, -3);
+        if (container.innerText.length === 0) {
+            container.innerText = '0';
         }         
     } else {
-        container.innerHTML = container.innerHTML.slice(0, -1);
-        if (container.innerHTML.length === 0) {
-            container.innerHTML = '0';
+        container.innerText = container.innerText.slice(0, -1);
+        if (container.innerText.length === 0) {
+            container.innerText = '0';
         } 
     }
 }
 
 function resetInput() {
-    container.innerHTML = '0';
+    container.innerText = '0';
 
-    if (document.getElementById('syntaxError').innerHTML === 'Syntax ERROR x') {
-        document.getElementById('syntaxError').innerHTML = '';
+    if (document.getElementById('syntaxError').innerText === 'Syntax ERROR x') {
+        document.getElementById('syntaxError').innerText = '';
     }
 }
