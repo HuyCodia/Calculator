@@ -3,10 +3,11 @@ window.addEventListener("load", function() {
   container = document.getElementById('resultArea');
 }, {once: true});
 
-window.addEventListener("click", reachMaxLength, {once: true});
+window.addEventListener("click", reachMaxLength);
 
 var maxLength = false;
 function reachMaxLength() {
+    console.log(container.innerText.length);
     if (container.innerText.length < 13) {
         maxLength = false;
         return;
